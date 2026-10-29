@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ExpoCaucasia 2026 · Un mundo de oportunidades</title>
+<meta name="description" content="ExpoCaucasia 2026: 6 y 7 de noviembre en el Palacio Municipal de Caucasia. Precios increíbles hasta 50% de descuento, música, arte y cultura.">
+<meta name="theme-color" content="#0b5d2a">
+<meta property="og:title" content="ExpoCaucasia 2026 · 6 y 7 de noviembre">
+<meta property="og:description" content="Precios increíbles hasta 50% dto. Palacio Municipal de Caucasia. Estrena y ahorra siempre.">
+<meta property="og:image" content="img/volante.jpg">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--verde:#0b5d2a;--verde2:#14843d;--amarillo:#ffd400;--fucsia:#e6177f;--morado:#5b1a8c;--rojo:#d7192b;--azul:#1677d6;--tinta:#13221a;--crema:#fffbea}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--tinta);background:var(--crema);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+
+/* barra superior */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:rgba(11,93,42,.0);transition:background .3s,box-shadow .3s}
+.top.solid{background:var(--verde);box-shadow:0 4px 18px rgba(0,0,0,.25)}
+.marca{font-family:Anton,sans-serif;color:#fff;font-size:22px;letter-spacing:1px;text-decoration:none}
+.marca span{color:var(--amarillo)}
+.lang{display:flex;border:2px solid #fff;border-radius:30px;overflow:hidden}
+.lang button{background:transparent;color:#fff;border:0;padding:6px 12px;font:600 13px Poppins;cursor:pointer}
+.lang button.on{background:var(--amarillo);color:var(--verde)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero .bg{position:absolute;inset:0;background:url(img/rio.jpg) center/cover;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05) translate(0,0)}to{transform:scale(1.22) translate(-3%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(11,93,42,.35) 45%,rgba(8,40,20,.95) 100%)}
+.hero .in{position:relative;z-index:2;padding:110px 18px 42px;width:100%}
+.cinta{display:inline-block;background:var(--fucsia);color:#fff;font-weight:800;padding:6px 14px;transform:rotate(-2deg);border-radius:6px;font-size:14px;letter-spacing:.5px;margin-bottom:14px;animation:pop 2.4s ease-in-out infinite}
+@keyframes pop{0%,100%{transform:rotate(-2deg) scale(1)}50%{transform:rotate(-2deg) scale(1.06)}}
+h1{font-family:Anton,sans-serif;font-weight:400;line-height:.9;font-size:clamp(64px,15vw,150px);letter-spacing:1px;text-shadow:0 6px 0 rgba(0,0,0,.25)}
+h1 b{display:block;color:var(--amarillo);font-weight:400}
+.lema{font-size:clamp(18px,4.4vw,26px);font-weight:600;margin:12px 0 22px}
+.lema em{font-style:normal;background:var(--amarillo);color:var(--verde);padding:0 8px;border-radius:4px}
+.fechas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.chip{background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.35);padding:9px 14px;border-radius:30px;font-weight:600;font-size:14px}
+.chip.y{background:var(--amarillo);color:var(--verde);border-color:var(--amarillo)}
+
+/* cuenta regresiva */
+.cuenta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:520px}
+.cuenta div{background:#fff;color:var(--verde);border-radius:14px;text-align:center;padding:10px 4px;box-shadow:0 8px 0 var(--verde2)}
+.cuenta strong{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(30px,8vw,46px);line-height:1}
+.cuenta small{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#456}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-block;border:0;cursor:pointer;text-decoration:none;font:800 15px Poppins;padding:13px 20px;border-radius:40px;transition:transform .15s}
+.btn:active{transform:scale(.96)}
+.btn.am{background:var(--amarillo);color:var(--verde)}
+.btn.fu{background:var(--fucsia);color:#fff}
+.btn.bl{background:#fff;color:var(--verde)}
+.btn.ve{background:var(--verde);color:#fff}
+
+/* marquesina */
+.marq{background:var(--rojo);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;font-family:Anton,sans-serif;font-size:22px;letter-spacing:1px}
+.marq .t{display:inline-block;animation:mq 26s linear infinite}
+.marq span{margin:0 26px}
+.marq span:nth-child(even){color:var(--amarillo)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* hoy */
+.hoy{background:var(--verde);color:#fff;padding:26px 0}
+.hoy .in{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.hoy .et{background:var(--amarillo);color:var(--verde);font-family:Anton,sans-serif;font-size:26px;padding:6px 14px;border-radius:8px;transform:rotate(-3deg)}
+.hoy p{flex:1;min-width:240px;font-size:17px}
+.hoy p small{display:block;opacity:.8;font-size:13px;margin-top:4px}
+
+section{padding:64px 0}
+h2{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(38px,8vw,64px);line-height:1;color:var(--verde);margin-bottom:10px}
+h2 .m{color:var(--fucsia)}
+.sub{font-size:17px;max-width:640px;margin-bottom:28px;color:#3c4b42}
+
+/* categorías */
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.cat{position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 10px 24px rgba(0,0,0,.12);transition:transform .25s;background:#fff;border:0;padding:0;text-align:left;font:inherit}
+.cat:hover,.cat.on{transform:translateY(-6px) rotate(-1deg)}
+.cat img{width:100%;aspect-ratio:1/0.92;object-fit:cover}
+.cat.on{outline:4px solid var(--amarillo)}
+.det{margin-top:18px;background:#fff;border-left:8px solid var(--fucsia);border-radius:12px;padding:16px 18px;font-size:16px;min-height:60px}
+
+/* expositores */
+.expo{background:var(--azul);color:#fff;background-image:linear-gradient(120deg,rgba(11,93,42,.92),rgba(22,119,214,.9)),url(img/rio.jpg);background-size:cover;background-position:center}
+.expo h2{color:#fff}.expo h2 .m{color:var(--amarillo)}.expo .sub{color:#e5f3ff}
+.gratis{display:inline-block;font-family:Anton,sans-serif;font-size:30px;background:var(--fucsia);padding:4px 16px;border-radius:8px;transform:rotate(-4deg);margin-bottom:12px;animation:pop 2s ease-in-out infinite}
+.pasos{list-style:none;counter-reset:p;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.pasos li{counter-increment:p;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.3);border-radius:16px;padding:16px 16px 16px 62px;position:relative;font-size:15px}
+.pasos li::before{content:counter(p);position:absolute;left:14px;top:12px;font-family:Anton,sans-serif;font-size:34px;color:var(--amarillo)}
+
+/* descuento */
+.desc{background:linear-gradient(135deg,var(--morado),var(--fucsia));color:#fff;position:relative;overflow:hidden}
+.desc h2{color:var(--amarillo)}
+.desc .sub{color:#fde9f4}
+.big50{position:absolute;right:-30px;top:-40px;font-family:Anton,sans-serif;font-size:300px;opacity:.12;line-height:1;pointer-events:none;animation:flo 6s ease-in-out infinite}
+@keyframes flo{50%{transform:translateY(20px) rotate(-4deg)}}
+.calc{background:#fff;color:var(--tinta);border-radius:20px;padding:22px;max-width:620px;position:relative;box-shadow:0 14px 0 rgba(0,0,0,.18)}
+.calc label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+.calc input[type=number]{width:100%;font:800 26px Poppins;padding:10px 14px;border:3px solid var(--verde);border-radius:12px}
+.calc input[type=range]{width:100%;accent-color:var(--fucsia);margin:16px 0 6px}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.res div{background:var(--crema);border-radius:12px;padding:12px}
+.res small{font-size:12px;font-weight:600;color:#567}
+.res strong{display:block;font-size:24px;color:var(--verde)}
+.res .ah strong{color:var(--fucsia)}
+.nota{font-size:12px;color:#667;margin-top:12px}
+
+/* cultura */
+.cult{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:center}
+.cult .ph{border-radius:24px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.2);transform:rotate(2deg)}
+.cult .ph img{width:100%;animation:kb2 12s ease-in-out infinite alternate}
+@keyframes kb2{to{transform:scale(1.1)}}
+.cult ul{list-style:none;display:grid;gap:12px;margin-top:10px}
+.cult li{background:#fff;border-radius:14px;padding:14px 16px;border-left:8px solid var(--verde2);font-size:16px}
+.cult li:nth-child(2){border-color:var(--fucsia)}
+.cult li:nth-child(3){border-color:var(--amarillo)}
+
+/* navidad */
+.nav{background:var(--rojo);color:#fff;position:relative;overflow:hidden}
+.nav .grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+.nav h2{color:#fff}
+.nav h2 b{color:var(--amarillo);font-weight:400}
+.nav .ph{border-radius:24px;overflow:hidden;border:6px solid var(--amarillo);transform:rotate(-2deg)}
+.nav .sub{color:#ffe7e9}
+.banderines{position:absolute;top:0;left:0;right:0;height:26px;background:repeating-linear-gradient(90deg,var(--amarillo) 0 40px,var(--verde2) 40px 80px,var(--fucsia) 80px 120px,var(--azul) 120px 160px);clip-path:polygon(0 0,100% 0,100% 40%,0 40%);opacity:.9}
+
+/* lista */
+.lista{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.caja{background:#fff;border-radius:20px;padding:22px;box-shadow:0 10px 26px rgba(0,0,0,.08)}
+.add{display:flex;gap:8px;margin:12px 0}
+.add input,.add select{flex:1;font:500 15px Poppins;padding:11px 12px;border:2px solid #d6e2da;border-radius:10px;min-width:0}
+.add select{flex:0 0 130px;max-width:45%}
+#items{list-style:none;display:grid;gap:8px}
+#items li{display:flex;align-items:center;gap:10px;background:var(--crema);padding:10px 12px;border-radius:10px}
+#items li.ok span{text-decoration:line-through;opacity:.5}
+#items li span{flex:1}
+#items li em{font-style:normal;font-size:11px;font-weight:600;background:var(--verde);color:#fff;padding:3px 8px;border-radius:20px}
+#items button{border:0;background:transparent;font:600 13px Poppins;color:var(--rojo);cursor:pointer}
+.vacio{color:#789;font-size:14px}
+
+/* lugar */
+.lugar{background:var(--verde);color:#fff}
+.lugar h2{color:var(--amarillo)}
+.lugar .sub{color:#d9f1e0}
+.lugar .g{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.mapa{border-radius:20px;overflow:hidden;min-height:300px;background:#0a4a22}
+.mapa iframe{width:100%;height:100%;min-height:300px;border:0}
+.datos{display:grid;gap:12px;align-content:start}
+.datos div{background:rgba(255,255,255,.1);border-radius:14px;padding:14px 16px}
+.datos small{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--amarillo);font-weight:600}
+.datos strong{font-size:18px}
+
+/* volante */
+.vol{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center}
+.vol img{border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.25);cursor:zoom-in}
+.org{display:grid;gap:12px;margin-top:16px}
+.org div{background:#fff;padding:14px 16px;border-radius:14px;border-left:8px solid var(--azul)}
+.org small{display:block;font-size:12px;font-weight:600;color:#678;text-transform:uppercase}
+
+.vibras{background:#111;color:#fff;padding:30px 0;text-align:center}
+.vibras a{color:var(--amarillo);font-weight:800}
+.vibras p{font-size:14px;opacity:.85;margin-top:6px}
+
+.zoom{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:99;display:none;align-items:center;justify-content:center;padding:16px}
+.zoom.on{display:flex}
+.zoom img{max-height:100%;border-radius:10px}
+
+.cult>*,.nav .grid>*,.lista>*,.lugar .g>*,.vol>*{min-width:0}
+.rev{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.rev.vis{opacity:1;transform:none}
+
+@media (max-width:760px){
+ .cult,.nav .grid,.lista,.lugar .g,.vol{grid-template-columns:1fr}
+ .res{grid-template-columns:1fr}
+ .big50{font-size:200px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="marca" href="#">EXPO<span>CAUCASIA</span></a>
+  <div class="lang" role="group" aria-label="Idioma / Language">
+    <button data-l="es" class="on">ES</button><button data-l="en">EN</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"></div>
+  <div class="in wrap">
+    <div class="cinta" data-i="cinta">PRECIOS INCREÍBLES · HASTA 50% DTO.</div>
+    <h1>EXPO<b>CAUCASIA</b></h1>
+    <p class="lema" data-i="lema">Un mundo de <em>oportunidades</em></p>
+    <div class="fechas">
+      <span class="chip y" data-i="fechas">6 y 7 de noviembre de 2026</span>
+      <span class="chip" data-i="lugarchip">Palacio Municipal · Caucasia</span>
+    </div>
+    <div class="cuenta" id="cuenta" aria-live="polite">
+      <div><strong id="cd-d">0</strong><small data-i="dias">días</small></div>
+      <div><strong id="cd-h">0</strong><small data-i="horas">horas</small></div>
+      <div><strong id="cd-m">0</strong><small data-i="min">min</small></div>
+      <div><strong id="cd-s">0</strong><small data-i="seg">seg</small></div>
+    </div>
+    <div class="ctas">
+      <a class="btn am" id="btnCal" href="#" data-i="agendar">Agendar en mi calendario</a>
+      <a class="btn fu" id="btnWa" href="#" target="_blank" rel="noopener" data-i="compartir">Compartir por WhatsApp</a>
+      <a class="btn bl" href="#lugar" data-i="comollegar">Cómo llegar</a>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="t" id="marq"></div></div>
+
+<div class="hoy">
+  <div class="wrap in">
+    <div class="et" data-i="hoyet">HOY</div>
+    <p id="hoyTxt"></p>
+  </div>
+</div>
+
+<section id="cats">
+  <div class="wrap rev">
+    <h2 data-i="catsT">Todo lo que vas a <span class="m">encontrar</span></h2>
+    <p class="sub" data-i="catsS">Toca cada categoría y arma tu plan de compras para la feria.</p>
+    <div class="cats" id="catGrid"></div>
+    <div class="det" id="catDet"></div>
+  </div>
+</section>
+
+<section class="expo" id="expon">
+  <div class="wrap rev">
+    <div class="expo-in">
+      <div class="gratis" data-i="gratis">GRATIS</div>
+      <h2 data-i="expT">¿Vendes? <span class="m">Expón gratis</span></h2>
+      <p class="sub" data-i="expS">La Alcaldía de Caucasia invita a empresarios y comerciantes. Si vendes calzado, ropa, electrodomésticos, tecnología, bisutería u otros, el espacio es totalmente gratis.</p>
+      <ol class="pasos">
+        <li data-i="p1"><b>Postúlate</b> en el formulario oficial de la Alcaldía.</li>
+        <li data-i="p2"><b>Lee las condiciones</b> y restricciones que aparecen en el formulario.</li>
+        <li data-i="p3"><b>Espera la respuesta:</b> la Alcaldía te avisa si fuiste seleccionado.</li>
+        <li data-i="p4"><b>Llega con descuentos</b> y promociones para el 6 y 7 de noviembre.</li>
+      </ol>
+      <div class="ctas">
+        <a class="btn am" href="https://forms.gle/8G7qHobm1dg81L1Y6" target="_blank" rel="noopener" data-i="inscribirme">Inscribirme como expositor</a>
+        <a class="btn bl" id="btnWa3" href="#" target="_blank" rel="noopener" data-i="avisar">Avisarle a un comerciante</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="desc">
+  <div class="big50">50%</div>
+  <div class="wrap rev">
+    <h2 data-i="descT">¿Cuánto te ahorras?</h2>
+    <p class="sub" data-i="descS">Hay descuentos de hasta el 50%. Pon el precio normal de lo que quieres comprar y mira cuánto pagarías.</p>
+    <div class="calc">
+      <label for="precio" data-i="precioL">Precio normal (pesos)</label>
+      <input type="number" id="precio" inputmode="numeric" value="150000" min="0" step="1000">
+      <label for="pct"><span data-i="pctL">Descuento</span>: <b id="pctV">30%</b></label>
+      <input type="range" id="pct" min="5" max="50" step="5" value="30">
+      <div class="res">
+        <div><small data-i="pagas">Pagas</small><strong id="pagas">$0</strong></div>
+        <div class="ah"><small data-i="ahorras">Te ahorras</small><strong id="ahorras">$0</strong></div>
+      </div>
+      <p class="nota" data-i="descNota">El descuento lo define cada expositor; "hasta 50%" es el máximo anunciado en el volante.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap cult rev">
+    <div class="ph"><img src="img/artistas.jpg" alt="Música, talento, arte y cultura en ExpoCaucasia"></div>
+    <div>
+      <h2 data-i="cultT">No es solo compras: <span class="m">es fiesta</span></h2>
+      <p class="sub" data-i="cultS">ExpoCaucasia trae a la tarima lo mejor de la región.</p>
+      <ul>
+        <li data-i="c1"><b>Música y talento</b> — voces y artistas locales en vivo.</li>
+        <li data-i="c2"><b>Arte y cultura</b> — baile, tradición y orgullo del Bajo Cauca.</li>
+        <li data-i="c3"><b>Programación</b> — los horarios y artistas se anunciarán por los canales de la Alcaldía.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="nav">
+  <div class="banderines"></div>
+  <div class="wrap grid rev">
+    <div>
+      <h2 data-i="navT">Desde noviembre se siente que viene <b>diciembre</b></h2>
+      <p class="sub" data-i="navS">Y en ExpoCaucasia estrenas y ahorras siempre. Adelanta los regalos, la pinta de fin de año y lo de la casa antes de la temporada alta.</p>
+      <a class="btn am" href="#lista" data-i="armar">Armar mi lista de regalos</a>
+    </div>
+    <div class="ph"><img src="img/navidad.jpg" alt="Caucasia a orillas del río Cauca"></div>
+  </div>
+</section>
+
+<section id="lista">
+  <div class="wrap lista rev">
+    <div>
+      <h2 data-i="listaT">Mi lista para la <span class="m">Expo</span></h2>
+      <p class="sub" data-i="listaS">Anota lo que vas a buscar y cuánto quieres gastar. Se guarda en tu celular.</p>
+      <div class="caja">
+        <strong data-i="presT">Mi presupuesto total</strong>
+        <div class="add"><input type="number" id="pres" inputmode="numeric" placeholder="Ej: 500000"></div>
+        <div class="res" style="margin-top:4px">
+          <div><small data-i="cosas">Cosas en la lista</small><strong id="nItems">0</strong></div>
+          <div class="ah"><small data-i="listos">Ya comprados</small><strong id="nOk">0</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="caja">
+      <form class="add" id="fAdd">
+        <input id="txt" required data-ph="phItem" placeholder="Ej: tenis para Isaac">
+        <select id="sel"></select>
+      </form>
+      <button class="btn ve" form="fAdd" type="submit" data-i="agregar">Agregar</button>
+      <ul id="items" style="margin-top:14px"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="lugar" id="lugar">
+  <div class="wrap rev">
+    <h2 data-i="lugarT">Nos vemos en el Palacio Municipal</h2>
+    <p class="sub" data-i="lugarS">Caucasia, Antioquia. En pleno centro, a pasos del río Cauca.</p>
+    <div class="g">
+      <div class="mapa"><iframe loading="lazy" title="Mapa Palacio Municipal Caucasia" src="https://maps.google.com/maps?q=Palacio%20Municipal%20Caucasia%20Antioquia&z=16&output=embed"></iframe></div>
+      <div class="datos">
+        <div><small data-i="cuando">Cuándo</small><strong data-i="cuandoV">Viernes 6 y sábado 7 de noviembre de 2026</strong></div>
+        <div><small data-i="donde">Dónde</small><strong data-i="dondeV">Palacio Municipal de Caucasia</strong></div>
+        <div><small data-i="horario">Horario</small><strong data-i="horarioV">Por confirmar por la organización</strong></div>
+        <a class="btn am" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Palacio+Municipal+Caucasia+Antioquia" data-i="ruta">Abrir ruta en Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap vol rev">
+    <img src="img/volante.jpg" alt="Volante oficial ExpoCaucasia 2026" id="volImg">
+    <div>
+      <h2 data-i="volT">El volante <span class="m">oficial</span></h2>
+      <p class="sub" data-i="volS">Tócalo para verlo en grande y compártelo con tu familia y tus clientes.</p>
+      <div class="org">
+        <div><small data-i="organiza">Organiza</small><strong>Alcaldía de Caucasia</strong></div>
+        <div><small data-i="apoya">Apoya</small><strong>Cámara de Comercio de Medellín para Antioquia</strong></div>
+      </div>
+      <div class="ctas"><a class="btn fu" id="btnWa2" href="#" target="_blank" rel="noopener" data-i="compartir">Compartir por WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="vibras">
+  <div class="wrap">
+    <strong data-i="hecha">App hecha por Vibras Positivas HM</strong>
+    <p data-i="vibrasS">¿Tienes negocio y vas a exponer? Te hacemos tu propia app de ventas. <a href="https://wa.me/573117700431" target="_blank" rel="noopener">WhatsApp 311 770 0431</a> · <a href="https://vibraspositivashm.com" target="_blank" rel="noopener">vibraspositivashm.com</a></p>
+  </div>
+</footer>
+
+<div class="zoom" id="zoom"><img src="img/volante.jpg" alt="Volante ExpoCaucasia en grande"></div>
+
+<script>
+const URL_APP = location.origin + location.pathname;
+const T = {
+ es:{gratis:"GRATIS",expT:'¿Vendes? <span class="m">Expón gratis</span>',expS:"La Alcaldía de Caucasia invita a empresarios y comerciantes. Si vendes calzado, ropa, electrodomésticos, tecnología, bisutería u otros, el espacio es totalmente gratis.",p1:"<b>Postúlate</b> en el formulario oficial de la Alcaldía.",p2:"<b>Lee las condiciones</b> y restricciones que aparecen en el formulario.",p3:"<b>Espera la respuesta:</b> la Alcaldía te avisa si fuiste seleccionado.",p4:"<b>Llega con descuentos</b> y promociones para el 6 y 7 de noviembre.",inscribirme:"Inscribirme como expositor",avisar:"Avisarle a un comerciante",waExp:"Si vendes calzado, ropa, electrodomésticos, tecnología o bisutería, en ExpoCaucasia (6 y 7 de noviembre) el stand es GRATIS. Postúlate en el formulario de la Alcaldía: https://forms.gle/8G7qHobm1dg81L1Y6 · Más info: ",
+ cinta:"PRECIOS INCREÍBLES · HASTA 50% DTO.",lema:'Un mundo de <em>oportunidades</em>',fechas:"6 y 7 de noviembre de 2026",lugarchip:"Palacio Municipal · Caucasia",dias:"días",horas:"horas",min:"min",seg:"seg",agendar:"Agendar en mi calendario",compartir:"Compartir por WhatsApp",comollegar:"Cómo llegar",hoyet:"HOY",
+ catsT:'Todo lo que vas a <span class="m">encontrar</span>',catsS:"Toca cada categoría y arma tu plan de compras para la feria.",
+ descT:"¿Cuánto te ahorras?",descS:"Hay descuentos de hasta el 50%. Pon el precio normal de lo que quieres comprar y mira cuánto pagarías.",precioL:"Precio normal (pesos)",pctL:"Descuento",pagas:"Pagas",ahorras:"Te ahorras",descNota:'El descuento lo define cada expositor; "hasta 50%" es el máximo anunciado en el volante.',
+ cultT:'No es solo compras: <span class="m">es fiesta</span>',cultS:"ExpoCaucasia trae a la tarima lo mejor de la región.",c1:"<b>Música y talento</b> — voces y artistas locales en vivo.",c2:"<b>Arte y cultura</b> — baile, tradición y orgullo del Bajo Cauca.",c3:"<b>Programación</b> — los horarios y artistas se anunciarán por los canales de la Alcaldía.",
+ navT:"Desde noviembre se siente que viene <b>diciembre</b>",navS:"Y en ExpoCaucasia estrenas y ahorras siempre. Adelanta los regalos, la pinta de fin de año y lo de la casa antes de la temporada alta.",armar:"Armar mi lista de regalos",
+ listaT:'Mi lista para la <span class="m">Expo</span>',listaS:"Anota lo que vas a buscar y cuánto quieres gastar. Se guarda en tu celular.",presT:"Mi presupuesto total",cosas:"Cosas en la lista",listos:"Ya comprados",agregar:"Agregar",phItem:"Ej: tenis para el niño",vacio:"Tu lista está vacía. Empieza con lo que más necesitas.",quitar:"quitar",
+ lugarT:"Nos vemos en el Palacio Municipal",lugarS:"Caucasia, Antioquia. En pleno centro, a pasos del río Cauca.",cuando:"Cuándo",cuandoV:"Viernes 6 y sábado 7 de noviembre de 2026",donde:"Dónde",dondeV:"Palacio Municipal de Caucasia",horario:"Horario",horarioV:"Por confirmar por la organización",ruta:"Abrir ruta en Google Maps",
+ volT:'El volante <span class="m">oficial</span>',volS:"Tócalo para verlo en grande y compártelo con tu familia y tus clientes.",organiza:"Organiza",apoya:"Apoya",hecha:"App hecha por Vibras Positivas HM",
+ vibrasS:'¿Tienes negocio y vas a exponer? Te hacemos tu propia app de ventas. <a href="https://wa.me/573117700431" target="_blank" rel="noopener">WhatsApp 311 770 0431</a> · <a href="https://vibraspositivashm.com" target="_blank" rel="noopener">vibraspositivashm.com</a>',
+ marq:["HASTA 50% DTO.","6 Y 7 DE NOVIEMBRE","PALACIO MUNICIPAL","ESTRENA Y AHORRA SIEMPRE","MÚSICA Y TALENTO","ARTE Y CULTURA","UN MUNDO DE OPORTUNIDADES"],
+ wa:"Vamos a ExpoCaucasia 2026: 6 y 7 de noviembre en el Palacio Municipal de Caucasia. Precios increíbles hasta 50% de descuento, música, arte y cultura. Mira todo aquí: ",
+ hoy:{antes:(d,f)=>`Faltan <b>${d} ${d==1?'día':'días'}</b> para ExpoCaucasia. Hoy es ${f}: buen momento para armar tu lista y separar el presupuesto.<small>Los horarios y la lista de expositores aún no se han publicado.</small>`,
+  dia1:f=>`<b>¡Arrancó ExpoCaucasia!</b> Hoy, ${f}, es el primer día. Llega temprano al Palacio Municipal para encontrar lo mejor.<small>Mañana sábado sigue la feria.</small>`,
+  dia2:f=>`<b>Último día de ExpoCaucasia.</b> Hoy, ${f}, es tu última oportunidad de aprovechar los descuentos.`,
+  despues:f=>`ExpoCaucasia 2026 ya pasó. Gracias por apoyar el comercio de Caucasia.<small>Hoy es ${f}.</small>`},
+ cats:{calzado:["Calzado","Tenis, zapatos de vestir y para el colegio. Ideal para la pinta de diciembre."],ropa:["Ropa para toda la familia","Estrenos para grandes y chicos antes de la temporada navideña."],tecnologia:["Tecnología","Celulares, audífonos, electrodomésticos y accesorios a precio de feria."],bisuteria:["Bisutería","Aretes, cadenas y detalles para regalar."],comidas:["Comidas","Gastronomía para todos los gustos mientras recorres la feria."],hogar:["Hogar","Muebles, decoración y lo que la casa necesita para recibir diciembre."],masmas:["Y mucho más","Emprendimientos y comercio local con ofertas que no vas a ver otra vez."]}
+ },
+ en:{gratis:"FREE",expT:'Selling? <span class="m">Exhibit for free</span>',expS:"The Caucasia Mayor's Office invites business owners and merchants. If you sell footwear, clothing, appliances, technology, jewelry or more, the space is completely free.",p1:"<b>Apply</b> through the Mayor's Office official form.",p2:"<b>Read the conditions</b> and restrictions shown in the form.",p3:"<b>Wait for the answer:</b> the Mayor's Office will tell you if you were selected.",p4:"<b>Bring discounts</b> and promotions for November 6 & 7.",inscribirme:"Apply as an exhibitor",avisar:"Tell a merchant",waExp:"If you sell footwear, clothing, appliances, tech or jewelry, the booth at ExpoCaucasia (Nov 6 & 7) is FREE. Apply on the Mayor's Office form: https://forms.gle/8G7qHobm1dg81L1Y6 · More info: ",
+ cinta:"INCREDIBLE PRICES · UP TO 50% OFF",lema:'A world of <em>opportunities</em>',fechas:"November 6 & 7, 2026",lugarchip:"Town Hall · Caucasia",dias:"days",horas:"hours",min:"min",seg:"sec",agendar:"Add to my calendar",compartir:"Share on WhatsApp",comollegar:"Directions",hoyet:"TODAY",
+ catsT:'Everything you will <span class="m">find</span>',catsS:"Tap each category and plan your shopping for the fair.",
+ descT:"How much do you save?",descS:"Discounts go up to 50%. Enter the regular price of what you want to buy and see what you would pay.",precioL:"Regular price (COP)",pctL:"Discount",pagas:"You pay",ahorras:"You save",descNota:'Each exhibitor sets its own discount; "up to 50%" is the maximum stated on the flyer.',
+ cultT:'Not just shopping: <span class="m">it is a party</span>',cultS:"ExpoCaucasia brings the best of the region to the stage.",c1:"<b>Music and talent</b> — local voices and live artists.",c2:"<b>Art and culture</b> — dance, tradition and Bajo Cauca pride.",c3:"<b>Schedule</b> — times and artists will be announced through the Mayor's Office channels.",
+ navT:"From November you can feel <b>December</b> coming",navS:"And at ExpoCaucasia you always get new things and save. Get your gifts, holiday outfits and home items before peak season.",armar:"Build my gift list",
+ listaT:'My list for the <span class="m">Expo</span>',listaS:"Write down what you are looking for and how much you want to spend. It stays on your phone.",presT:"My total budget",cosas:"Items on the list",listos:"Already bought",agregar:"Add",phItem:"E.g. sneakers for my son",vacio:"Your list is empty. Start with what you need most.",quitar:"remove",
+ lugarT:"See you at the Town Hall",lugarS:"Caucasia, Antioquia. Right downtown, steps from the Cauca River.",cuando:"When",cuandoV:"Friday Nov 6 and Saturday Nov 7, 2026",donde:"Where",dondeV:"Palacio Municipal (Town Hall), Caucasia",horario:"Hours",horarioV:"To be confirmed by the organizers",ruta:"Open route in Google Maps",
+ volT:'The <span class="m">official</span> flyer',volS:"Tap it to see it full size and share it with your family and customers.",organiza:"Organized by",apoya:"Supported by",hecha:"App made by Vibras Positivas HM",
+ vibrasS:'Have a business and exhibiting? We build your own sales app. <a href="https://wa.me/573117700431" target="_blank" rel="noopener">WhatsApp +57 311 770 0431</a> · <a href="https://vibraspositivashm.com" target="_blank" rel="noopener">vibraspositivashm.com</a>',
+ marq:["UP TO 50% OFF","NOVEMBER 6 & 7","TOWN HALL","NEW THINGS, BIG SAVINGS","MUSIC AND TALENT","ART AND CULTURE","A WORLD OF OPPORTUNITIES"],
+ wa:"Let's go to ExpoCaucasia 2026: November 6 & 7 at the Caucasia Town Hall. Up to 50% off, music, art and culture. See it all here: ",
+ hoy:{antes:(d,f)=>`<b>${d} ${d==1?'day':'days'}</b> to go until ExpoCaucasia. Today is ${f}: a good time to build your list and set your budget.<small>Hours and the exhibitor list have not been published yet.</small>`,
+  dia1:f=>`<b>ExpoCaucasia has started!</b> Today, ${f}, is day one. Get to the Town Hall early for the best deals.<small>The fair continues tomorrow, Saturday.</small>`,
+  dia2:f=>`<b>Last day of ExpoCaucasia.</b> Today, ${f}, is your last chance to grab the discounts.`,
+  despues:f=>`ExpoCaucasia 2026 is over. Thanks for supporting Caucasia's local businesses.<small>Today is ${f}.</small>`},
+ cats:{calzado:["Footwear","Sneakers, dress shoes and school shoes. Perfect for your holiday outfit."],ropa:["Clothes for the whole family","New outfits for everyone before the holiday season."],tecnologia:["Technology","Phones, headphones, appliances and accessories at fair prices."],bisuteria:["Jewelry","Earrings, chains and small gifts."],comidas:["Food","Treats and meals to enjoy while you walk the fair."],hogar:["Home","Furniture, decor and what your home needs to welcome December."],masmas:["And much more","Local businesses and entrepreneurs with deals you won't see again."]}
+ }
+};
+const CATS=["calzado","ropa","tecnologia","bisuteria","comidas","hogar","masmas"];
+let L='es'; try{L=localStorage.getItem('expo_l')||(navigator.language||'es').slice(0,2)}catch(e){} if(!T[L])L='es';
+let catSel='calzado';
+const $=s=>document.querySelector(s);
+
+/* Hora real de Colombia */
+const TZ='America/Bogota';
+const INICIO=new Date('2026-11-06T00:00:00-05:00'), FIN=new Date('2026-11-08T00:00:00-05:00');
+function fechaHoy(){return new Intl.DateTimeFormat(L==='es'?'es-CO':'en-US',{timeZone:TZ,weekday:'long',day:'numeric',month:'long'}).format(new Date())}
+function ymdBog(d){return new Intl.DateTimeFormat('en-CA',{timeZone:TZ}).format(d)}
+
+function tick(){
+ const now=new Date(); let ms=Math.max(0,INICIO-now);
+ const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4),s=Math.floor(ms%6e4/1e3);
+ $('#cd-d').textContent=d;$('#cd-h').textContent=h;$('#cd-m').textContent=m;$('#cd-s').textContent=s;
+}
+function hoy(){
+ const H=T[L].hoy,f=fechaHoy(),hoyYmd=ymdBog(new Date());
+ let html;
+ if(hoyYmd<'2026-11-06'){const dd=Math.ceil((INICIO-new Date())/864e5);html=H.antes(dd,f)}
+ else if(hoyYmd==='2026-11-06')html=H.dia1(f);
+ else if(hoyYmd==='2026-11-07')html=H.dia2(f);
+ else html=H.despues(f);
+ $('#hoyTxt').innerHTML=html;
+}
+
+function render(){
+ const t=T[L];
+ document.documentElement.lang=L;
+ document.querySelectorAll('[data-i]').forEach(el=>{if(t[el.dataset.i]!==undefined)el.innerHTML=t[el.dataset.i]});
+ document.querySelectorAll('[data-ph]').forEach(el=>el.placeholder=t[el.dataset.ph]);
+ document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===L));
+ const items=t.marq.map(x=>`<span>${x}</span>`).join('');$('#marq').innerHTML=items+items;
+ const wa='https://wa.me/?text='+encodeURIComponent(t.wa+URL_APP);$('#btnWa').href=wa;$('#btnWa2').href=wa;$('#btnWa3').href='https://wa.me/?text='+encodeURIComponent(t.waExp+URL_APP);
+ $('#catGrid').innerHTML=CATS.map(c=>`<button class="cat${c===catSel?' on':''}" data-c="${c}"><img src="img/${c}.jpg" alt="${t.cats[c][0]}" loading="lazy"></button>`).join('');
+ $('#catDet').innerHTML=`<b>${t.cats[catSel][0]}.</b> ${t.cats[catSel][1]}`;
+ $('#sel').innerHTML=CATS.map(c=>`<option value="${c}">${t.cats[c][0]}</option>`).join('');
+ hoy();calc();lista();
+}
+document.querySelector('.lang').addEventListener('click',e=>{const l=e.target.dataset.l;if(!l)return;L=l;try{localStorage.setItem('expo_l',L)}catch(_){}render()});
+$('#catGrid').addEventListener('click',e=>{const b=e.target.closest('.cat');if(!b)return;catSel=b.dataset.c;render()});
+
+/* calculadora */
+const pesos=n=>'$'+Math.round(n).toLocaleString('es-CO');
+function calc(){const p=+$('#precio').value||0,pc=+$('#pct').value;$('#pctV').textContent=pc+'%';$('#pagas').textContent=pesos(p*(1-pc/100));$('#ahorras').textContent=pesos(p*pc/100)}
+$('#precio').addEventListener('input',calc);$('#pct').addEventListener('input',calc);
+
+/* lista (se guarda en el celular) */
+let LST=[],PRES='';
+try{LST=JSON.parse(localStorage.getItem('expo_lista')||'[]');PRES=localStorage.getItem('expo_pres')||''}catch(e){}
+$('#pres').value=PRES;
+function guardar(){try{localStorage.setItem('expo_lista',JSON.stringify(LST));localStorage.setItem('expo_pres',$('#pres').value)}catch(e){}}
+function lista(){
+ const t=T[L];
+ $('#items').innerHTML=LST.length?LST.map((it,i)=>`<li class="${it.ok?'ok':''}"><input type="checkbox" data-k="${i}" ${it.ok?'checked':''} aria-label="ok"><span></span><em>${t.cats[it.c]?t.cats[it.c][0]:''}</em><button data-x="${i}">${t.quitar}</button></li>`).join(''):`<li class="vacio">${t.vacio}</li>`;
+ document.querySelectorAll('#items li span').forEach((s,i)=>s.textContent=LST[i].t);
+ $('#nItems').textContent=LST.length;$('#nOk').textContent=LST.filter(x=>x.ok).length;
+}
+$('#fAdd').addEventListener('submit',e=>{e.preventDefault();const v=$('#txt').value.trim();if(!v)return;LST.push({t:v,c:$('#sel').value,ok:false});$('#txt').value='';guardar();lista()});
+$('#items').addEventListener('click',e=>{if(e.target.dataset.x!==undefined){LST.splice(+e.target.dataset.x,1)}else if(e.target.dataset.k!==undefined){LST[+e.target.dataset.k].ok=e.target.checked}else return;guardar();lista()});
+$('#pres').addEventListener('input',guardar);
+
+/* calendario .ics */
+$('#btnCal').addEventListener('click',e=>{
+ e.preventDefault();
+ const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Vibras Positivas HM//ExpoCaucasia//ES','BEGIN:VEVENT','UID:expocaucasia-2026@vibraspositivashm','DTSTAMP:20261029T000000Z','DTSTART;VALUE=DATE:20261106','DTEND;VALUE=DATE:20261108','SUMMARY:ExpoCaucasia 2026','LOCATION:Palacio Municipal\\, Caucasia\\, Antioquia','DESCRIPTION:Precios increíbles hasta 50% dto. Música\\, arte y cultura. '+URL_APP,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download='ExpoCaucasia-2026.ics';document.body.appendChild(a);a.click();a.remove();
+});
+
+/* zoom volante */
+$('#volImg').addEventListener('click',()=>$('#zoom').classList.add('on'));
+$('#zoom').addEventListener('click',()=>$('#zoom').classList.remove('on'));
+
+/* barra y animaciones */
+addEventListener('scroll',()=>$('#top').classList.toggle('solid',scrollY>60),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+
+render();tick();setInterval(tick,1000);setInterval(hoy,60000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){hoy();tick()}});
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>
